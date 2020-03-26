@@ -1,0 +1,105 @@
+*{margin:0;padding:0}
+body{
+    font-size:15px;
+}
+/* 整体 */
+.container{
+    display:flex;
+}
+/* 左边图片 */
+.container_image{
+    width:400px;
+    height:700px;
+    background-image:url(../images/bt.jpg);
+    background-position:center;
+    background-size:cover;
+}
+/* 右边内容 */
+.container_content{
+    width:400px;
+    height:700px;
+    background-color:pink;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.content_head{
+    display:table-cell;
+    margin-top:10px;
+}
+.content_head .money{
+    vertical-align:center;
+    text-align:center;
+    margin-top:10px;
+}
+/* 产品细节部分 三个横向均匀分布  */
+.container_content .product{
+    width:360px;
+    display:flex;
+    justify-content:space-around;
+    margin-top:10px;
+    /* background-color:yellow; */
+}
+.container_content .product .product_one{
+    width:120px;
+    text-align:center;
+}
+.container_content .product div+div{
+    width:120px;
+    height:25px;
+    border-left:1px solid gray;
+    text-align:center;
+}
+/* 产品中间按钮部分 */
+.container_content .product .product_two button{
+    width:15px;
+    height:15px;
+    line-height:15px;
+}
+/* 产品右侧收藏爱心部分 */
+.container_content .product .product_three img{
+    width:20px;
+    height:15px;
+}
+
+/* 我好开心啊文字 */
+.container_content .product_detail{
+    display:table-cell;
+    margin-top:10px;
+}
+
+.container_content .product_detail .detail-inner{
+    vertical-align:middle;
+    text-align:center;
+    margin-top:10px;
+}
+.container_content .product_detail .detail-inner p{
+    margin-top:5px;
+}
+/* 我的爱好,点击需展开内容 */
+.container_content .myHobby{
+    margin-top:10px;
+}
+.container_content .myHobby ul{
+    display:table-cell; 
+    list-style:none;
+   
+}
+.container_content .myHobby li{
+    vertical-align:middle;
+    text-align:center;
+    margin-top:10px; 
+}
+.container_content .myHobby li:hover{
+    cursor:pointer;
+}
+/* 我的相册部分 */
+#album_detail{
+    display:block;
+    background-color:gray;
+}
+/* 我的文章部分 */
+#essay_detail{
+    display:none;
+    background-color:gray;
+}

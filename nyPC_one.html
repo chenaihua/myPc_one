@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左边图片 -->
+        <div class="container_image"></div>
+        <!-- 右边内容  -->
+        <div class="container_content">
+            <div class="content_head">
+                <h3>这是我的官网呀</h3>
+                <p class="money">¥10000.00</p>
+            </div>
+            <!-- 产品细节部分 三个横向均匀分布 -->
+            <div class="product">
+                <div class="product_one">产品细节</div>
+                <div class="product_two">
+                    <button>-</button>
+                        1
+                    <button>+</button>
+                </div>
+                <div class="product_three">
+                    <span>收藏</span>
+                    <img src="./images/like.png" alt="">
+                </div>
+            </div>
+            <!-- 产品详细 -->
+            <div class="product_detail">
+                <div class="detail-inner">
+                    <p>我好开心啊</p>
+                    <p>哈哈哈哈哈哈哈</p>
+                    <p>哈哈哈哈哈哈哈</p>
+                </div>
+                <div class="detail-inner">
+                    <p>我好开心啊 </p>
+                    <p>哈哈哈哈哈哈哈</p>
+                    <p>哈哈哈哈哈哈哈</p>
+                </div>
+                <div class="detail-inner">
+                    <p>我好开心啊 </p>
+                    <p>哈哈哈哈哈哈哈</p>
+                    <p>哈哈哈哈哈哈哈</p>
+                </div>
+            </div>
+            <!-- 点击展开 -->
+            <div class="myHobby">
+                <ul>
+                        <li onClick="clickAlbumClose('album_detail')">我的相册
+                            <ul id="album_detail">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
+                        </li>
+                        <li onClick="clickAlbumOpen('essay_detail')">我的文章
+                            <ul id="essay_detail">
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                            </ul>
+                        </li>
+                        <li>我的朗诵</li>
+                        <li>我喜欢的影视</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 漂浮窗 -->
+        <!-- 编写一段web端页面漂浮窗的js代码,要求漂浮速度为40s,带关闭功能,点击后链接到空白页面,尺寸为W:150,H:300.全屏漂浮,出界反弹, 左右浮动-->
+        <div 
+            id="img" 
+            style="position:absolute; left: 311; top: 815;visibility :hidden;" 
+            onmouseover="clearInterval(interval)" 
+            onmouseout="interval = setInterval('changePos()', delay)" align="right"
+        >
+            <a href="#" target="_blank">
+                <!-- img图片都会带默认像素 -->
+                <img border="0" src="./images/like.png">
+            </a>
+            <br>
+            <span style="cursor: pointer;color:gray;font-weight:bold" onclick="clearInterval(interval);img.style.visibility = 'hidden'">
+            X
+           </span>
+        </div>
+    </div>
+    <!-- 引入所需js -->
+    <script type="text/javascript"src="./js/clickAlbum.js"></script>
+    <script type="text/javascript"src="./js/float.js"></script>
+</body>
+</html>
